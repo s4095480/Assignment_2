@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <title>
+        Assignment 2
+        </title>
+
+    <style>
+        .row {
+            width:720px;
+            margin: 10px auto 10px auto;
+        }
+        .image-container {
+            display: table-cell;
+            vertical-align: middle;
+            padding:20px;
+        }
+        img:hover {
+            transition: transform 0.2s;
+            transform:scale(1.2);
+        }
+    </style>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/buzz/1.2.1/buzz.min.js"></script>
+
+    </head>
+
+    <body style="background-color:black">
+        <div class="row">
+            <div class="image-container"><img id="img1" src="Img/Doorbell1.png" onmouseover="this.src='Img/Doorbell2.png';" onmouseout="this.src='Img/Doorbell1.png';" width="200" height="200"/></div>
+            <div class="image-container"><img id="img2" src="Img/AlarmSystem1.png" onmouseover="this.src='Img/AlarmSystem2.png';" onmouseout="this.src='Img/AlarmSystem1.png';" width="200" height="200"/></div>
+            <div class="image-container"><img id="img3" src="Img/Speaker1.png" onmouseover="this.src='Img/Speaker2.png';" onmouseout="this.src='Img/Speaker1.png';" width="200" height="200"/></div>
+        </div>
+
+        <div class="row">
+            <div class="image-container"><img id="img4" src="Img/Lightbulb1.png" onmouseover="this.src='Img/Lightbulb2.png';" onmouseout="this.src='Img/Lightbulb1.png';" width="200" height="200"/></div>
+            <div class="image-container"><img id="img5" src="Img/SecurityCamera1.png" onmouseover="this.src='Img/SecurityCamera2.png';" onmouseout="this.src='Img/SecurityCamera1.png';" width="200" height="200"/></div>
+            <div class="image-container"><img id="img6" src="Img/Thermostat1.png" onmouseover="this.src='Img/Thermostat2.png';" onmouseout="this.src='Img/Thermostat1.png';" width="200" height="200"/></div>
+        </div>
+
+        <div class="row">
+            <div class="image-container"><img id="img7" src="Img/CeilingFan1.png" onmouseover="this.src='Img/CeilingFan2.png';" onmouseout="this.src='Img/CeilingFan1.png';" width="200" height="200"/></div>
+            <div class="image-container"><img id="img8" src="Img/GarageDoor1.png" onmouseover="this.src='Img/GarageDoor2.png';" onmouseout="this.src='Img/GarageDoor1.png';" width="200" height="200"/></div>
+            <div class="image-container"><img id="img9" src="Img/Remote1.png" onmouseover="this.src='Img/Remote2.png';" onmouseout="this.src='Img/Remote1.png';" width="200" height="200"/></div>
+        </div>
+
+        <script>
+            var sound1 = new buzz.sound("Sound/Doorbell.mp3");
+            var sound2 = new buzz.sound("Sound/AlarmSystem_revised.mp3");
+            var sound3 = new buzz.sound("Sound/Speaker.mp3");
+
+            var sound4 = new buzz.sound("Sound/Lightbulb1.mp3");
+            var sound4_1 = new buzz.sound("Sound/Lightbulb2.mp3");
+            var sound5 = new buzz.sound("Sound/SecurityCamera.mp3");
+            var sound6 = new buzz.sound("Sound/Thermostat2.mp3");
+            var sound6_1 = new buzz.sound("Sound/Thermostat_Revised_2.mp3");
+
+            var sound7 = new buzz.sound("Sound/CeilingFan_revised.mp3");
+            var sound8 = new buzz.sound("Sound/GarageDoor.mp3");
+            var sound9 = new buzz.sound("Sound/Remote_Revised.mp3");
+
+            window.onload = function() {
+                document.getElementById('img1').addEventListener('mouseover', function () {sound1.play();});
+                document.getElementById('img2').addEventListener('mouseover', function () {sound2.play();});
+                document.getElementById('img3').addEventListener('mouseover', function () {sound3.play();});
+
+                document.getElementById('img4').addEventListener('mouseover', function () {sound4.play();});
+                document.getElementById('img4').addEventListener('mouseout', function () {sound4_1.play();});
+                document.getElementById('img5').addEventListener('mouseover', function () {sound5.play();});
+                document.getElementById('img6').addEventListener('mouseover', function () {sound6.play();});
+                document.getElementById('img6').addEventListener('mouseout', function () {sound6_1.play();});
+
+                document.getElementById('img7').addEventListener('mouseover', function () {sound7.play();});
+                document.getElementById('img8').addEventListener('mouseover', function () {sound8.play();});
+                document.getElementById('img9').addEventListener('mouseover', function () {sound9.play();});
+            }
+
+        </script>
+       
+    </body>
+</html>
